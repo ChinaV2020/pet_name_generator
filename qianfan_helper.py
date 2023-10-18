@@ -1,15 +1,17 @@
 from langchain.llms import QianfanLLMEndpoint
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 
-load_dotenv()
+# load_dotenv()
 
 prompt_template_name = PromptTemplate(
     input_variables=['animal_type','color'],
     template="帮我的{color}的宠物{animal_type}取5个名字,我只需要结果"
 
 )
+
+
 
 def generate_pet_name(animal_type,color):
     llm = QianfanLLMEndpoint(temperature=0.6)
