@@ -4,9 +4,6 @@ import streamlit as st
 import time
 import os
 
-
-os.system('pip install --no-cache-dir -r requirements.txt')
-
 st.title('智能宠物取名系统')
 
 # 设置千帆的api key
