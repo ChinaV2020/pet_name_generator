@@ -20,14 +20,14 @@ if ak and sk:
     # 手动导入环境变量
     os.environ['QIANFAN_AK'] = str(ak)
     os.environ['QIANFAN_SK'] = str(sk)
-
+else:
+    st.toast('请输入千帆的key再操作!')
 
 clicked = st.sidebar.button('试试手气')
 
 if clicked and ak and sk:
     st.markdown(qf.generate_pet_name(animal_type,color))
     time.sleep(2)
-else:
-    st.toast('请输入千帆的key再操作!')
+
 
 
